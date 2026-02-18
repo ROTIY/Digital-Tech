@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Tech Pool Payment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="intro">
+    <img
+      class="logo"
+      src="logo.png"
+      alt="Digital Tech Logo"
+    />
+    <h1>Welcome to Digital Tech Pool Payment</h1>
+    
+    <div id="tableInfo" class="table-info" style="display: none;">
+      <h2>Pool Table: <span id="tableNumber">Loading...</span></h2>
+      <p>Enter your details to play on this table.</p>
+    </div>
+
+    <p>Enter your phone number and how many games you'd like to play!</p>
+
+    <div class="forms">
+      <label for="phone">M-Pesa Phone Number:</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        placeholder="e.g. 0712345678 or 254712345678" 
+        pattern="[0-9]{9,12}" 
+        title="Enter a valid Kenyan phone number (9-12 digits)" 
+        required 
+      />
+
+      <label for="games">Number of Games:</label>
+      <input 
+        type="number" 
+        id="games" 
+        min="1" 
+        max="50" 
+        value="1" 
+        required 
+      />
+
+      <p id="totalDisplay" class="total">Total: 20 KSh (1 game)</p>
+    </div>
+
+    <button class="pay-btn" id="payButton">Pay 20 KSh via M-Pesa</button>
+
+    <div class="status" id="status">Ready to play? Fill in the details and tap above.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
